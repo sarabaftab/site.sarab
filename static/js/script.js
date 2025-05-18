@@ -1,12 +1,12 @@
-/* script.js */
-const helloPart = document.getElementById("hello-part");
-const highlightedPart = document.getElementById("highlighted-part");
+
+const helloPart = document.getElementById('hello-part');
+const highlightedPart = document.getElementById('highlighted-part');
 const helloText = "Hello, ";
 const highlightText = "I am Sarab!";
 let i = 0;
 
 function typeHello() {
-  if (i < helloText.length) {
+  if (helloPart && i < helloText.length) {
     helloPart.textContent += helloText.charAt(i);
     i++;
     setTimeout(typeHello, 100);
@@ -17,7 +17,7 @@ function typeHello() {
 }
 
 function typeHighlight() {
-  if (i < highlightText.length) {
+  if (highlightedPart && i < highlightText.length) {
     highlightedPart.textContent += highlightText.charAt(i);
     i++;
     setTimeout(typeHighlight, 100);

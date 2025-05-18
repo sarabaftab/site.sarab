@@ -1,4 +1,3 @@
-/* === Base Theme Styles === */
 body {
   background-color: #0f111a;
   font-family: "JetBrains Mono", monospace;
@@ -8,7 +7,6 @@ body {
   display: flex;
 }
 
-/* === VSCode Layout === */
 .vscode-layout {
   display: flex;
   width: 100vw;
@@ -16,7 +14,6 @@ body {
   overflow: hidden;
 }
 
-/* === Sidebar === */
 .sidebar {
   width: 250px;
   background-color: #1e1e2e;
@@ -56,14 +53,12 @@ body {
   margin-right: 8px;
 }
 
-/* Highlight current page */
 .sidebar ul li a.active {
   background-color: #333;
   color: #00ffff;
   font-weight: bold;
 }
 
-/* === Main Editor Area === */
 .editor {
   flex: 1;
   padding: 2rem;
@@ -71,9 +66,45 @@ body {
   overflow-y: auto;
 }
 
-.editor-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+/* Line numbers + code shell layout */
+.code-shell {
+  display: flex;
+  background-color: #1e1e2e;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 2rem;
+  border: 1px solid #2b2b3b;
+}
+
+.line-numbers {
+  background-color: #1a1b27;
+  color: #606672;
+  padding: 1rem 0.75rem;
+  text-align: right;
+  user-select: none;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  border-right: 1px solid #2e2e3e;
+}
+
+.line-numbers span {
+  display: block;
+}
+
+.code-content {
+  padding: 1rem 2rem;
+  flex: 1;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #f0f0f0;
 }
 
 .highlight {
@@ -83,11 +114,32 @@ body {
 p {
   color: #c0c0c0;
   font-size: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* === CTA Button === */
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  color: #d0d0d0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+pre {
+  background-color: #15161f;
+  color: #e5e5e5;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .hire-btn {
+  display: inline-block;
+  margin-top: 1rem;
   text-decoration: none;
   color: #facc15;
   font-weight: bold;
@@ -102,7 +154,6 @@ p {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* === Cursor Animation === */
 .cursor {
   color: #00ffff;
   animation: blink 0.8s infinite;
