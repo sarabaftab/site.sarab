@@ -1,39 +1,45 @@
 {% extends "base.html" %} {% block content %}
-<div class="code-shell">
-  <div class="line-numbers">
-    {% for i in range(1, 25) %}<span>{{ i }}</span>
-    {% endfor %}
-  </div>
-  <div class="code-content">
-    <h1>
-      <span id="hello-part"></span
-      ><span id="highlighted-part" class="highlight"></span
-      ><span class="cursor">|</span>
-    </h1>
+<h1>
+  <span id="hello-part"></span
+  ><span id="highlighted-part" class="highlight"></span
+  ><span class="cursor">|</span>
+</h1>
 
-    <section class="hero-intro">
-      <p>
-        Welcome to my space on the internet. I’m Sarab — a developer who loves
-        building products that feel simple, elegant, and alive.
-      </p>
-      <p>
-        This site is a curated look into who I am, what I build, and what I care
-        about. Start anywhere.
-      </p>
-      <a href="{{ url_for('connect') }}" class="hire-btn">📬 Say Hello</a>
-    </section>
+<section class="hero-intro">
+  <p>
+    Welcome to my space on the internet. I’m Sarab — a developer who loves
+    building products that feel simple, elegant, and alive.
+  </p>
+  <p>
+    This site is a curated look into who I am, what I build, and what I care
+    about. Start anywhere.
+  </p>
+  <a href="{{ url_for('connect') }}" class="hire-btn">📬 Say Hello</a>
+</section>
 
-    <section class="me-section">
-      <h2>🧠 Me, in a Code Snippet</h2>
-      <pre><code>const sarab = {
+<section class="me-section">
+  <h2>🧠 Me, in a Code Snippet</h2>
+  <pre><code>const sarab = {
   role: "Full-stack Developer",
   passion: ["AI", "Developer Tools", "Clean UI"],
   favorite_stack: ["Flask", "React", "TailwindCSS"],
   currently_learning: ["Kubernetes", "System Design"]
 }</code></pre>
-    </section>
-  </div>
-</div>
+</section>
+
+<section class="now-section">
+  <h2>📌 Currently Into</h2>
+  <ul>
+    <li>🛠 Rebuilding this site in Flask with VSCode aesthetics</li>
+    <li>📦 Exploring AI startup ideas with VantixAI</li>
+    <li>📚 Reading: "Designing Data-Intensive Applications"</li>
+    <li>🎧 Listening to: Indie Dev podcasts</li>
+  </ul>
+</section>
+
+<section class="cta-area">
+  <a href="{{ url_for('projects') }}" class="hire-btn">🧠 See What I Build</a>
+</section>
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}
