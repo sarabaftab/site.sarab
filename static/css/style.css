@@ -53,9 +53,9 @@ body {
   margin-right: 8px;
 }
 
-.sidebar ul li a.active {
-  background-color: #333;
-  color: #00ffff;
+.sidebar a.active {
+  background-color: #2a2a2a;
+  color: #ffd700; /* Yellow text */
   font-weight: bold;
 }
 
@@ -64,6 +64,30 @@ body {
   padding: 2rem;
   box-sizing: border-box;
   overflow-y: auto;
+}
+
+/* activitybar */
+.activity-bar {
+  width: 50px;
+  background-color: #1e1e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  border-right: 1px solid #333;
+  gap: 1rem;
+}
+
+.activity-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #cccccc;
+  transition: all 0.2s ease;
+}
+
+.activity-icon:hover {
+  color: #00ffff;
+  transform: scale(1.1);
 }
 
 /* Line numbers + code shell layout */
