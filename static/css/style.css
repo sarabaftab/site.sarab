@@ -56,7 +56,6 @@ body {
 .sidebar a.active {
   background-color: #2a2a2a;
   color: #f3e48f; /* Yellow text */
-  font-weight: bold;
 }
 
 .editor {
@@ -152,7 +151,7 @@ ul li {
 }
 
 .code-snippet {
-  background-color: #0c1b2a; /* Deep navy */
+  background-color: #0c1b2a;
   color: #e6edf3;
   padding: 1rem;
   border-radius: 8px;
@@ -165,19 +164,19 @@ ul li {
 }
 
 .code-snippet .keyword {
-  color: #ff7edb; /* vibrant pink */
+  color: #ff7edb;
 }
 .code-snippet .variable {
-  color: #57c7ff; /* sky blue */
+  color: #57c7ff;
 }
 .code-snippet .property {
-  color: #ffa759; /* warm amber */
+  color: #ffa759;
 }
 .code-snippet .string {
-  color: #b4f8c8; /* mint green */
+  color: #b4f8c8;
 }
 .code-snippet .array {
-  color: #82e9f3; /* cool teal */
+  color: #82e9f3;
 }
 .code-snippet .symbol {
   color: #6c7086;
@@ -206,6 +205,170 @@ ul li {
 .cursor {
   color: #00ffff;
   animation: blink 0.8s infinite;
+}
+
+.vs-terminal-shell {
+  background-color: #1e1e2e;
+  color: #00ff95;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-bottom: -3rem;
+  position: sticky;
+  bottom: 0;
+}
+
+.vs-terminal-tabs {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #1e1e2e;
+  border-bottom: 1px solid #333;
+  font-size: 0.75rem;
+}
+
+.vs-terminal-tabs .tab {
+  color: #a0a0a0;
+  padding: 0.3rem 0.6rem;
+  cursor: default;
+}
+
+.vs-terminal-tabs .tab.active {
+  background-color: #252526;
+  color: #ffd700;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.vs-terminal-tab {
+  font-size: 0.75rem;
+  color: #ffd700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.vs-terminal-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vs-terminal-inputs div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vs-prompt {
+  color: #00ff95;
+  white-space: nowrap;
+}
+
+.vs-terminal-inputs input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #666;
+  color: #e4e4e7;
+  flex: 1;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.25rem 0;
+}
+
+.vs-submit {
+  margin-top: 0.75rem;
+  align-self: flex-end;
+  background: none;
+  border: 1px solid #555;
+  color: #ffd700;
+  padding: 0.3rem 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* GITHUB-STYLE EXPERIENCE CARDS */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.repo-card {
+  background-color: #161620;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.repo-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.repo-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin: 0;
+}
+
+.repo-subtitle {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin: 0.2rem 0 0;
+}
+
+.repo-description {
+  font-size: 0.95rem;
+  margin: 0.75rem 0;
+  line-height: 1.5;
+}
+
+.repo-tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.repo-tags li {
+  background-color: #2d2d3a;
+  color: #c0c0c0;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+}
+
+.company-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #444;
+  padding: 2px;
+}
+.repo-card {
+  border-left: 8px solid #444; /* default for past */
+}
+
+.repo-card.ongoing {
+  border-left-color: #00ff95; /* bright green for current roles */
+}
+
+.repo-card.past {
+  border-left-color: #666666; /* muted gray for past roles */
 }
 
 @keyframes blink {
