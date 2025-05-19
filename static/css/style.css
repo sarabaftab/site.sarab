@@ -306,6 +306,10 @@ ul li {
   padding: 1rem 1.2rem;
   color: #e0e0e0;
   margin-bottom: 1rem;
+  border-left: 4px solid #444; /* default for past */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s ease-out;
 }
 
 .repo-header {
@@ -324,7 +328,9 @@ ul li {
 
 .repo-subtitle {
   font-size: 0.9rem;
-  color: #a0a0a0;
+  /* color: #a0a0a0; */
+  color: #9cffff;
+  /* color: #ffd700; */
   margin: 0.2rem 0 0;
 }
 
@@ -369,6 +375,10 @@ ul li {
 
 .repo-card.past {
   border-left-color: #666666; /* muted gray for past roles */
+}
+.repo-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes blink {
