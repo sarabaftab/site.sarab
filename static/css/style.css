@@ -292,63 +292,105 @@ ul li {
   cursor: pointer;
 }
 
-/* GITHUB-STYLE EXPERIENCE CARDS */
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.repo-card {
-  background-color: #161620;
+/* experience card */
+.experience-card {
+  background-color: #1e1e2e;
   border: 1px solid #333;
-  border-radius: 8px;
-  padding: 1rem 1.2rem;
-  color: #e0e0e0;
-  margin-bottom: 1rem;
-  border-left: 4px solid #444; /* default for past */
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1.5s ease-out;
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: border 0.3s ease, background 0.3s ease;
+  cursor: pointer;
 }
 
-.repo-header {
+.experience-card:hover {
+  border-color: #00ffff;
+}
+
+.experience-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-left {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0.5rem;
 }
 
-.repo-title {
-  font-size: 1.2rem;
+.company-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 90px;
+  background-color: #fff;
+  border: 1px solid #444;
+  padding: 2px;
+}
+
+.experience-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.role {
+  margin: 0;
+  font-size: 1rem;
   font-weight: bold;
   color: #ffd700;
+}
+
+.company {
+  margin: 0.2rem 0 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.experience-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #d0d0d0;
   margin: 0;
 }
 
-.repo-subtitle {
+.toggle-arrow {
+  font-size: 1rem;
+  color: #bbb;
+  transition: transform 0.3s;
+}
+
+.experience-card.expanded .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.experience-details {
+  display: none;
+  margin-top: 1rem;
   font-size: 0.9rem;
-  /* color: #a0a0a0; */
-  color: #9cffff;
-  /* color: #ffd700; */
-  margin: 0.2rem 0 0;
+  color: #ccc;
 }
 
-.repo-description {
-  font-size: 0.95rem;
-  margin: 0.75rem 0;
-  line-height: 1.5;
+.experience-card.expanded .experience-details {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
 }
 
-.repo-tags {
-  list-style: none;
-  padding: 0;
+.tags {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
+  padding: 0;
+  list-style: none;
 }
 
-.repo-tags li {
+.tags li {
   background-color: #2d2d3a;
   color: #c0c0c0;
   font-size: 0.75rem;
@@ -356,29 +398,24 @@ ul li {
   border-radius: 999px;
 }
 
-.company-logo {
-  width: 72px;
-  height: 72px;
-  object-fit: contain;
-  border-radius: 6px;
-  background-color: #fff;
-  border: 1px solid #444;
-  padding: 2px;
-}
-.repo-card {
-  border-left: 8px solid #444; /* default for past */
+/* Ongoing roles: soft green gradient */
+.experience-card.ongoing {
+  background: linear-gradient(135deg, #1e1e2e 50%, rgba(0, 255, 153, 0.168));
 }
 
-.repo-card.ongoing {
-  border-left-color: #00ff95; /* bright green for current roles */
+/* Past roles: muted look */
+.experience-card.past {
+  background: #1e1e2e;
 }
-
-.repo-card.past {
-  border-left-color: #666666; /* muted gray for past roles */
-}
-.repo-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes blink {

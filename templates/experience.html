@@ -1,9 +1,75 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="section-title">
   🧠 <span id="typing-heading"></span><span class="cursor">|</span>
-</h2>
+</h1>
+<div class="experience-card ongoing">
+  <div class="experience-top">
+    <div class="experience-left">
+      <img
+        src="https://media.licdn.com/dms/image/v2/D4D0BAQHageI_AMaN_Q/company-logo_100_100/company-logo_100_100/0/1715167013690/webecommerce_logo?e=1753315200&v=beta&t=LtcynizBrV1sJ1GHV5FVeI8LP-Hm6qAVAB33XMPWhPI"
+        alt="WEP Logo"
+        class="company-logo"
+      />
+      <div class="experience-info">
+        <p class="role">Software Engineer Intern</p>
+        <p class="company">Web Ecommerce Pros</p>
+      </div>
+    </div>
+    <div class="experience-right">
+      <p class="date">May – Aug 2024</p>
+      <!-- <span class="toggle-arrow">⌄</span> -->
+    </div>
+  </div>
 
-<!-- Mayo Clinic -->
+  <div class="experience-details">
+    <p>
+      Built and optimized ecommerce storefronts using Flask and Shopify. 
+      Improved page speed and developed internal admin tools.
+    </p>
+    <ul class="tags">
+      <li>Flask</li>
+      <li>Shopify</li>
+      <li>JavaScript</li>
+      <li>BigCommerce</li>
+    </ul>
+  </div>
+</div>
+<div class="experience-card past">
+  <div class="experience-top">
+    <div class="experience-left">
+      <img
+        src="https://media.licdn.com/dms/image/v2/D4D0BAQHageI_AMaN_Q/company-logo_100_100/company-logo_100_100/0/1715167013690/webecommerce_logo?e=1753315200&v=beta&t=LtcynizBrV1sJ1GHV5FVeI8LP-Hm6qAVAB33XMPWhPI"
+        alt="WEP Logo"
+        class="company-logo"
+      />
+      <div class="experience-info">
+        <p class="role"> Software Engineer Intern</p>        
+        <p class="company">Web Ecommerce Pros</p>
+      </div>
+    </div>
+    <div class="experience-right">
+      <p class="date">May – Aug 2024</p>
+      <span class="toggle-arrow">⌄</span>
+    </div>
+  </div>
+
+  <div class="experience-details">
+    <p>
+      Built and optimized ecommerce storefronts using Flask and Shopify. 
+      Improved page speed and developed internal admin tools.
+    </p>
+    <ul class="tags">
+      <li>Flask</li>
+      <li>Shopify</li>
+      <li>JavaScript</li>
+      <li>BigCommerce</li>
+    </ul>
+  </div>
+</div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  {% endblock %}
+  <!-- Mayo Clinic
 <div class="experience-list">
   <div class="repo-card ongoing">
     <div class="repo-header">
@@ -30,7 +96,6 @@
     </ul>
   </div>
 </div>
-<!-- WEP DevOps -->
 <div class="experience-list">
   <div class="repo-card ongoing">
     <div class="repo-header">
@@ -58,7 +123,6 @@
   </div>
 </div>
 
-<!-- Vantix AI -->
 <div class="experience-list">
   <div class="repo-card ongoing">
     <div class="repo-header">
@@ -86,7 +150,6 @@
   </div>
 </div>
 
-<!-- WEP SWE -->
 <div class="experience-list">
   <div class="repo-card past">
     <div class="repo-header">
@@ -116,7 +179,6 @@
   </div>
 </div>
 
-<!-- TruBridge -->
 <div class="experience-list">
   <div class="repo-card past">
     <div class="repo-header">
@@ -146,7 +208,6 @@
   </div>
 </div>
 
-<!-- Luther College -->
 <div class="experience-list">
   <div class="repo-card past">
     <div class="repo-header">
@@ -174,7 +235,5 @@
       <li>AV Systems</li>
     </ul>
   </div>
+</div> -->
 </div>
-
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-{% endblock %}

@@ -40,20 +40,8 @@ function typeHeading() {
 
 document.addEventListener("DOMContentLoaded", typeHeading);
 
-// animation
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.1,
-  }
-);
-
-document.querySelectorAll(".repo-card").forEach((card) => {
-  observer.observe(card);
+document.querySelectorAll(".experience-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("expanded");
+  });
 });
